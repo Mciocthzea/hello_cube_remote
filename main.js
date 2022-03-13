@@ -16,5 +16,12 @@ const camera01={
     camera:undefined
 }
 camera01.camera = new THREE.PerspectiveCamera(camera01.fov,camera01.asp,camera01.near,camera01.far);
+camera01.camera.position.z=3;
+
+const cube01 = new THREE.BoxGeometry(1,1,1);
+const material01 = new THREE.MeshBasicMaterial({color:0xff00ff});
+const cube_mesh01 = new THREE.Mesh(cube01,material01);
+
+scene.add(cube_mesh01);
 
 renderer.render(scene,camera01.camera);
